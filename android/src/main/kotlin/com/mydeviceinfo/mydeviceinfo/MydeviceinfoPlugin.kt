@@ -31,7 +31,7 @@ class MydeviceinfoPlugin: FlutterPlugin, MethodCallHandler {
     return "Brand: ${Build.BRAND} \n" +
             "DeviceID: ${
                 Settings.Secure.getString(
-                    contentResolver,
+                    getActivity().getContentResolver(),
                     Settings.Secure.ANDROID_ID
                 )
             } \n" +
